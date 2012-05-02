@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'ColaborateThinRegular';
+    src: url('font/ColabThi-webfont.eot');
+    src: url('font/ColabThi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/ColabThi-webfont.woff') format('woff'),
+         url('font/ColabThi-webfont.ttf') format('truetype'),
+         url('font/ColabThi-webfont.svg#ColaborateThinRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ColaborateLightRegular';
+    src: url('font/ColabLig-webfont.eot');
+    src: url('font/ColabLig-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/ColabLig-webfont.woff') format('woff'),
+         url('font/ColabLig-webfont.ttf') format('truetype'),
+         url('font/ColabLig-webfont.svg#ColaborateLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ColaborateRegular';
+    src: url('font/ColabReg-webfont.eot');
+    src: url('font/ColabReg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/ColabReg-webfont.woff') format('woff'),
+         url('font/ColabReg-webfont.ttf') format('truetype'),
+         url('font/ColabReg-webfont.svg#ColaborateRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

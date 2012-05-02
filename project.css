@@ -1,0 +1,88 @@
+h1.fontface {
+    font: 60px/68px 'ColaborateThinRegular', Arial, sans-serif;letter-spacing: 0;
+}
+
+p {
+    border-radius: 20px 20px 20px 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    box-shadow: 5px 5px 10px 2px #333333; 
+}
+
+p.style1 {
+    font: 18px/27px 'ColaborateThinRegular', Arial, sans-serif;
+    background-color: #DDDDDD;
+    text-align: justify;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+p.style2 {
+    font: 18px/27px 'ColaborateLightRegular', Arial, sans-serif;
+    background-color: #AAAAAA;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+p.style3 {
+    font: 18px/27px 'ColaborateRegular', Arial, sans-serif;
+    background-color: #555555;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+p.style4 {
+    font: 18px/27px 'ColaborateThinRegular', Arial, sans-serif;
+    background-color: #DDDDDD;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+p.style5 {
+    font: 18px/27px 'ColaborateLightRegular', Arial, sans-serif;
+    background-color: #AAAAAA;
+    text-align: justify;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a:link {
+ color : #000000;
+ text-decoration: none
+}
+a:visited {
+ color : #CCCCCC;
+ text-decoration: none
+}
+a:hover {
+ color : #999999;
+ text-decoration : none;
+}
+a:active {
+ color : #BBBBBB;
+ text-decoration: none
+}
+input[name="pass"] {
+    background-color: #B3CDB0;
+}
+input[name="user"] {
+    background-color: #B3CDB0;
+}
+
+input.myButton {
+  background-color: #888888; /* colore di sfondo    */
+  border: 2px solid #BBBBBB; /* bordo dell'elemento */
+  color: #fff;               /* colore del testo    */
+  font-weight: bold;         /* testo in grassetto  */
+  padding: 0;                /* padding             */
+  height: 25px;              /* altezza             */
+  width: 80px;               /* larghezza           */
+}

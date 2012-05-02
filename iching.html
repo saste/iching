@@ -1,0 +1,83 @@
+<?php
+   $nomehost = "localhost";    
+   $nome = "root";         
+   $pass = "";   
+   $connessione = mysql_connect($nomehost,$nome,$pass);
+   $name_db = "dbamm";
+   $database=mysql_select_db($name_db,$connessione);
+   ?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>IChing on-mind</title>
+
+    <link rel="stylesheet" href="style/stylesheet.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="style/project.css" type="text/css" charset="utf-8">
+    <script type="text/javascript" src="script_js/myScript.js"></script>
+
+    <script language="Javascript">
+      function showContent(codContent){
+      document.getElementById('home').style.display='none';
+      document.getElementById('m_proverbi').style.display='none';
+      document.getElementById('t_proverbi').style.display='none';
+      document.getElementById('i_proverbi').style.display='none';
+      document.getElementById(codContent).style.display='block';
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="container">
+      <?php
+         $query_ut="SELECT nomeUt, cognomeUt FROM tblUtente WHERE idUt='".$_GET['id']."'";
+         $result_ut = mysql_query($query_ut);
+         if($result_ut)
+         if($num_rows_ut = mysql_num_rows($result_ut)>0)
+      $row_ut = mysql_fetch_array($result_ut);
+      ?>
+
+
+      <h1 class="fontface">Benvenuto <?php echo $row_ut[0]." ".$row_ut[1];?>! (id: <?php echo $_GET['id']; ?>)</span></h1>
+<p class="style4">
+  <a href="javascript:showContent('home');">Home</a> | <a href="javascript:showContent('m_proverbi');">Miei proverbi</a> | <a href="javascript:showContent('t_proverbi');">Tutti i proverbi</a> | <a href="javascript:showContent('i_proverbi');">Inserisci proverbio</a>
+</p>
+
+<p class="style5" id="m_proverbi" style="display:none">    
+  <?php 
+     $query="SELECT idMe, testoMe, dataMe FROM tblMessaggio WHERE idUt='".$_GET['id']."'";
+     $result = mysql_query($query);
+     if($result)
+     if($num_rows = mysql_num_rows($result)>0)
+  while($row = mysql_fetch_array($result)){
+  echo $row_ut[0]." ".$row_ut[1].", in data ".$row[2].", ha scritto:<br>".$row[1]."<br>(Messaggio id: ".$row[0].") [<a href=\"script_php/cancellaMessaggio.php?ut=".$_GET['id']."&id=".$row[0]."\">Cancella</a>]<br><br>";
+  }
+  ?>
+</p>
+<p class="style5" id="t_proverbi" style="display:none">    
+  <?php 
+     $query="SELECT idMe, testoMe, dataMe, nomeUt, cognomeUt FROM tblMessaggio, tblUtente WHERE tblMessaggio.idUt=tblUtente.idUt";
+     $result = mysql_query($query);
+     if($result)
+     if($num_rows = mysql_num_rows($result)>0)
+  while($row = mysql_fetch_array($result)){
+  echo $row[3]." ".$row[4].", in data ".$row[2].", ha scritto:<br>".$row[1]."<br>(Messaggio id: ".$row[0].")<br><br>";
+  }
+  ?>
+</p>
+
+<form name="formMessaggio" id="messaggioForm" method="POST" action="script_php/inserisciMessaggio.php?ut=<?php echo $_GET['id'];?>">
+  <p class="style5" id="i_proverbi" style="display:none">    
+    <input type="text" size="100" maxlength="140" name="testoMe">
+    <input class="myButton" type="submit" value="Invia">
+  </p>
+</form>
+
+<p class="style4">
+  Sito realizzato da Meister Sabba Tin per Universit&agrave; degli Studi di Cagliari.
+</p> 
+</div>
+
+</body>
+</html>
