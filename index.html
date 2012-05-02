@@ -22,14 +22,14 @@
       </p>
     </form>
 
-    <form name="questionForm" id="questionForm" action="getAnswer.php" method="POST">
+    <form name="questionForm" id="questionForm" action="getAnswer.php" method="post">
       <p class="style2">
         Type your question here<br>
         <textarea cols="40" rows="5" id="questionTextArea">
         </textarea>
         <br>
 
-        <input type="button" value="Get answer">
+        <input type="submit" value="Get answer">
         <input type="button" value="Clear question" onclick="document.getElementById('questionTextArea').value='';">
       </p>
     </form>
