@@ -13,29 +13,48 @@
 
 <body>
   <div id="page-container">
-    <h1 class="fontface"><span>IChing onmind</span></h1>
-    
-    <form name="loginForm" id="formLogin" action="checkLogin.php" method="POST">
+
+  <div id="main-nav">Main Nav</div>
+  
+  <div id="header">
+  <h1 class="fontface">IChing</h1>	     
+  </div>
+
+  <div id="sidebar">Sidebar</div>
+  
+  <div id="content">Content</div>
+  <form name="loginForm" id="formLogin" action="checkLogin.php" method="POST">
       <p class="style2">    
         Username<input name="user" id="usr" type="text">
         Password<input name="pass" id="psw" type="password">
         <input onclick="checkLogin();" type="button" value="Login">
       </p>
-    </form>
+  </form>
 
-    <form name="questionForm" id="questionForm" action="getAnswer.php" method="post">
-      <p class="style2">
-        Type your question here<br>
-        <textarea cols="40" rows="5" id="questionTextArea">
-        </textarea>
-        <br>
-
-        <input type="submit" value="Get answer">
-        <input type="button" value="Clear question" onclick="document.getElementById('questionTextArea').value='';">
-      </p>
-    </form>
-
+  <form name="questionForm" id="questionForm" action="getAnswer.php" method="post">
+    <p class="style2">
+      Type your question here<br>
+      <textarea cols="40" rows="5" id="questionTextArea">
+      </textarea>
+      <br>
+      
+      <input type="submit" value="Get answer">
+      <input type="button" value="Clear question" onclick="document.getElementById('questionTextArea').value='';">
+    </p>
+  </form>
   </div>
+  
+  <div id="footer">
+    <p class="style3">
+      Site realized by <a href="mailto:stefasab@gmail.com">Meister
+      Stefano Sabbatin</a>
+      for <a href="http://www.unica.it/">Universitas Studiorum
+      Kalaritana</a>.
+    </p>
+  </div>
+</div>
+    
+
 </body>
 
 </html>
