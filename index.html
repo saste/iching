@@ -23,25 +23,26 @@
   <div id="sidebar" class="hidden">Sidebar</div>
   
   <div id="content">
-  <form name="loginForm" id="formLogin" action="checkLogin.php" method="POST">
-    <p class="style2">    
-      Username<input name="user" id="usr" type="text">
-      Password<input name="pass" id="psw" type="password">
-      <input onclick="checkLogin();" type="button" value="Login">
-    </p>
-  </form>
+    <form name="loginForm" id="formLogin" action="checkLogin.php" method="POST">
+      <p class="style2">    
+        Username<input name="user" id="usr" type="text">
+        Password<input name="pass" id="psw" type="password">
+        <input onclick="checkLogin();" type="button" value="Login">
+      </p>
+    </form>
 
-  <form name="questionForm" id="questionForm" action="getAnswer.php" method="post">
-    <p class="style2">
-      Type your question here<br>
-      <textarea cols="40" rows="5" id="questionTextArea">
-      </textarea>
-      <br>
+    <form name="questionForm" id="questionForm" action="getAnswer.php" method="post">
+      <p class="style2">
+        Type your question here<br>
+        <textarea cols="40" rows="5" id="questionTextArea">
+        </textarea>
+        <br>
       
-      <input type="submit" value="Get answer">
-      <input type="button" value="Clear question" onclick="$('#questionTextArea').val('');">
-    </p>
-  </form>
+        <input type="submit" value="Get answer">
+        <input type="button" value="Clear question"
+               onclick="$('#questionTextArea').val('');">
+      </p>
+    </form>
   </div>
 
   <div id="footer">
