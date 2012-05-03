@@ -24,11 +24,11 @@
   
   <div id="content">Content</div>
   <form name="loginForm" id="formLogin" action="checkLogin.php" method="POST">
-      <p class="style2">    
-        Username<input name="user" id="usr" type="text">
-        Password<input name="pass" id="psw" type="password">
-        <input onclick="checkLogin();" type="button" value="Login">
-      </p>
+    <p class="style2">    
+      Username<input name="user" id="usr" type="text">
+      Password<input name="pass" id="psw" type="password">
+      <input onclick="checkLogin();" type="button" value="Login">
+    </p>
   </form>
 
   <form name="questionForm" id="questionForm" action="getAnswer.php" method="post">
@@ -39,17 +39,22 @@
       <br>
       
       <input type="submit" value="Get answer">
-      <input type="button" value="Clear question" onclick="document.getElementById('questionTextArea').value='';">
+      <input type="button" value="Clear question" onclick="$('#questionTextArea').val('');">
     </p>
   </form>
   </div>
-  
+
   <div id="footer">
-    <p class="style3">
-      Site realized by <a href="mailto:stefasab@gmail.com">Meister
-      Stefano Sabbatin</a>
+    <p>Copyright © Stefano Sabatini 2012</p>
+
+    <p>Site realized by <a href="mailto:stefasab@gmail.com">Meister Stefano Sabbatin</a>
       for <a href="http://www.unica.it/">Universitas Studiorum
       Kalaritana</a>.
+    </p>
+
+    <p>
+      Powered by <a href="http://www.emacs.org/">Emacs</a> and
+      <a href="http://www.gnu.org/gnu/linux-and-gnu.html.nz/">GNU/Linux</a>.
     </p>
   </div>
 </div>

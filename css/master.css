@@ -3,10 +3,10 @@ h1.fontface {
 }
 
 p {
-    border-radius: 20px 20px 20px 20px;
     padding-right: 30px;
     padding-left: 30px;
-    box-shadow: 5px 5px 10px 2px #333333; 
+    /* border-radius: 20px 20px 20px 20px; */
+    /* box-shadow: 5px 5px 10px 2px #333333;  */
 }
 
 p.style1 {
@@ -54,14 +54,17 @@ p.style5 {
     margin-left: auto;
     margin-right: auto;
 }
+
 a:link {
  color : #000000;
  text-decoration: none
 }
+
 a:visited {
  color : #CCCCCC;
  text-decoration: none
 }
+
 a:hover {
  color : #999999;
  text-decoration : none;
@@ -85,4 +88,21 @@ input.myButton {
   padding: 0;                /* padding             */
   height: 25px;              /* altezza             */
   width: 80px;               /* larghezza           */
+}
+
+#footer {
+    clear: both;
+    height: 66px;
+    font-family: Tahoma, Arial, Helvetica, Sans-serif;
+    font-size: 10px;
+    color: #c9c9c9;
+}
+
+#footer a {
+    color: #c9c9c9;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #db6d16;
 }
