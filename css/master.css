@@ -1,3 +1,7 @@
+h1 {
+    text-align: center;
+}
+
 h1.fontface {
     font: 60px/68px 'ColaborateThinRegular', Arial, sans-serif;
     letter-spacing: 0;
