@@ -130,6 +130,8 @@ input.myButton {
 }
 
 #footer {
+    padding-top: 20px;
+    text-align: center;
     clear: both;
     height: 66px;
     font-family: Tahoma, Arial, Helvetica, Sans-serif;
