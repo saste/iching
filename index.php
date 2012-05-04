@@ -32,7 +32,7 @@
   <div id="sidebar">
     <ul>
       <li>How does it work</li>
-      <li>IChing resources</li>
+      <li><a href="#" onclick="getPageContent('resources')">IChing resources</a></li>
       <li>My view on why it does work</li>
       <li>Random references</li>
       <li><a href="#" onclick="getPageContent('about')">About this website</a></li>
