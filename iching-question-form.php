@@ -8,7 +8,7 @@
       <input type="button" value="Clear question"
              onclick="$('#questionTextArea').val('');">
 
-      <!-- see which IChing systems are available -->
+      <!-- see which IChing translations are available -->
       <div>
       <?php include "get_iching_radio.php" ?>
       </div>
