@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="css/font.css" type="text/css" charset="utf-8">
 
   <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-  <script type="text/javascript" src="login.js"></script>
+  <script type="text/javascript" src="js/misc.js"></script>
 </head>
 
-<body>
+<body onload="init()" >
   <div id="page-container">
 
   <div id="loginbar">
@@ -38,21 +38,6 @@
   </div>
   
   <div id="content">
-
-    <form name="questionForm" id="questionForm" action="getAnswer.php" method="post">
-      Type your question here<br>
-      <textarea cols="40" rows="5" id="questionTextArea">
-      </textarea>
-      <br>
-
-      <input type="submit" value="Get answer">
-      <input type="button" value="Clear question"
-             onclick="$('#questionTextArea').val('');">
-
-      <!-- see which IChing systems are available -->
-      <div>
-        <?php include "get_iching_radio.php" ?>
-      </div>
   </div>
   </form>
   </div>

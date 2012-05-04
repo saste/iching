@@ -2,6 +2,21 @@ var expr_alphanum = /^[a-zA-Z0-9]+$/;
 var expr_alpha = /^[a-zA-Z]+$/;
 var expr_num = /^[0-9]+$/;
 
+function init()
+{
+    // fill initial content
+    $('#content').html('');
+
+    xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            $('#content').html(xhr.responseText);
+        }
+    }
+    xhr.open("GET", "iching-question-form.php", true);
+    xhr.send();
+}
+
 function checkLogin()
 {
     nomeUtente=document.getElementById('usr');
