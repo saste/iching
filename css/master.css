@@ -18,7 +18,7 @@ p {
     /* box-shadow: 5px 5px 10px 2px #333333;  */
 }
 
-p.style1 {
+.style1 {
     font: 18px/27px 'ColaborateThinRegular', Arial, sans-serif;
     background-color: #DDDDDD;
     text-align: justify;
@@ -26,7 +26,7 @@ p.style1 {
     padding-bottom: 30px;
 }
 
-p.style2 {
+.style2 {
     font: 18px/27px 'ColaborateLightRegular', Arial, sans-serif;
     background-color: #AAAAAA;
     text-align: center;
@@ -34,7 +34,7 @@ p.style2 {
     padding-bottom: 30px;
 }
 
-p.style3 {
+.style3 {
     font: 18px/27px 'ColaborateRegular', Arial, sans-serif;
     background-color: #555555;
     text-align: center;
@@ -42,7 +42,7 @@ p.style3 {
     padding-bottom: 30px;
 }
 
-p.style4 {
+.style4 {
     font: 18px/27px 'ColaborateThinRegular', Arial, sans-serif;
     background-color: #DDDDDD;
     text-align: center;
@@ -50,7 +50,7 @@ p.style4 {
     padding-bottom: 5px;
 }
 
-p.style5 {
+.style5 {
     font: 18px/27px 'ColaborateLightRegular', Arial, sans-serif;
     background-color: #AAAAAA;
     text-align: justify;
