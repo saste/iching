@@ -17,8 +17,8 @@
 
   <div id="loginbar">
     <form name="loginForm" id="formLogin" action="checkLogin.php" method="POST">
-      Username<input name="user" id="usr" type="text">
-      Password<input name="pass" id="psw" type="password">
+      Username<input id="username" type="text">
+      Password<input id="password" type="password">
       <input onclick="checkLogin();" type="button" value="Login">
     </form>
   </div>

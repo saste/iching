@@ -56,23 +56,6 @@ function submitQuestion()
     xhr.send();
 }
 
-function checkLogin()
-{
-    nomeUtente=document.getElementById('usr');
-    passwordUtente=document.getElementById('psw');
-    if (nomeUtente.value=='' || passwordUtente.value=='') {
-        alert('Nome utente e/o password mancante.');
-    } else {
-        if(is_alphanumeric(nomeUtente.value) && is_alphanumeric(passwordUtente.value))
-            document.forms["formLogin"].submit();
-        else {
-            alert('Il nome utente e la password possono contenere solo lettere e numeri.');
-            document.getElementById('psw').style.background='#ff5555';
-            document.getElementById('usr').style.background='#ff5555';
-        }
-    }        
-}
-
 function isAlphanumeric(str)
 {
     var expr_alphanum = /^[a-zA-Z0-9]+$/;
@@ -89,4 +72,21 @@ function isNumeric(str)
 {
     var expr_num = /^[0-9]+$/;
     return expr_num.test(str);
+}
+
+function checkLogin()
+{
+    var username = $('#username').val();
+    var password = $('#password').val();
+    if (username == '' || password == '') {
+        alert('Missing username and/or password.');
+    } else {
+        if (is_alphanumeric(username) && is_alphanumeric(password)) {
+            document.forms["formLogin"].submit();
+        } else {
+            alert('Invalid username or password specified, they can only contain letters or numbers');
+            $('#password').style.background='#ff5555';
+            $('#username').style.background='#ff5555';
+        }
+    } 
 }
