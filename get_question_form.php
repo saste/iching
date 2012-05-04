@@ -1,4 +1,4 @@
-<form name="questionForm" id="questionForm" action="getAnswer.php" method="post">
+<form name="questionForm" id="questionForm" action="get_answer.php" method="post">
       Type your question here<br>
       <textarea cols="40" rows="5" id="questionTextArea">
       </textarea>

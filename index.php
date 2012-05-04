@@ -16,7 +16,7 @@
   <div id="page-container">
 
   <div id="loginbar">
-    <form name="loginForm" id="formLogin" action="checkLogin.php" method="POST">
+    <form name="loginForm" id="formLogin" action="check_login.php" method="POST">
       Username<input id="username" type="text">
       Password<input id="password" type="password">
       <input onclick="checkLogin();" type="button" value="Login">

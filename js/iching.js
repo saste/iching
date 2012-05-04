@@ -13,7 +13,7 @@ function getQuestionForm()
             // bind 'questionForm'
             $('#questionForm')
             .ajaxForm({
-                url: 'getAnswer.php',
+                url: 'get_answer.php',
                 success: function(data) {
                     $('#content').html(data);
                 }
@@ -27,7 +27,7 @@ function getQuestionForm()
             });
         }
     }
-    xhr.open("GET", "iching-question-form.php", true);
+    xhr.open("GET", "get_question_form.php", true);
     xhr.send();
 }
 
