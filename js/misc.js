@@ -11,6 +11,33 @@ function init()
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             $('#content').html(xhr.responseText);
+
+            // bind 'questionForm'
+            $('#questionForm').ajaxForm({
+                url: 'getAnswer.php',
+                success: function(data) {
+                    $('#content').html(data);
+                }
+            });
+            // attach handler to form's submit event 
+            $('#questionForm').submit(function() { 
+                // submit the form 
+                $(this).ajaxSubmit(); 
+                // return false to prevent normal browser submit and page navigation 
+                return false; 
+            });
+        }
+    }
+    xhr.open("GET", "iching-question-form.php", true);
+    xhr.send();
+}
+
+function submitQuestion()
+{
+    xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            $('#content').html(xhr.responseText);
         }
     }
     xhr.open("GET", "iching-question-form.php", true);
