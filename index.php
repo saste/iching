@@ -35,7 +35,7 @@
       <li>IChing resources</li>
       <li>My view on why it does work</li>
       <li>Random references</li>
-      <li>About this website</li>
+      <li><a href="#" onclick="getPageContent('about')">About this website</a></li>
     </ul> 
   </div>
   

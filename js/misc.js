@@ -33,6 +33,21 @@ function init()
     xhr.send();
 }
 
+function getPageContent(page)
+{
+    xhr = new XMLHttpRequest();
+    url = page + ".html";
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            $('#content').html(xhr.responseText);
+        }
+    }
+    xhr.open("GET", url, true);
+    xhr.send();
+    return false;
+}
+
 function submitQuestion()
 {
     xhr = new XMLHttpRequest();
