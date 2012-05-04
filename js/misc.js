@@ -13,14 +13,15 @@ function init()
             $('#content').html(xhr.responseText);
 
             // bind 'questionForm'
-            $('#questionForm').ajaxForm({
+            $('#questionForm')
+            .ajaxForm({
                 url: 'getAnswer.php',
                 success: function(data) {
                     $('#content').html(data);
                 }
-            });
+            })
             // attach handler to form's submit event 
-            $('#questionForm').submit(function() { 
+            .submit(function() { 
                 // submit the form 
                 $(this).ajaxSubmit(); 
                 // return false to prevent normal browser submit and page navigation 
