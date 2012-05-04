@@ -18,6 +18,33 @@ p {
     /* box-shadow: 5px 5px 10px 2px #333333;  */
 }
 
+#main-nav {
+    background: red;
+    height: 50px;
+}
+
+#header {
+    height: 100px;
+    background: #db6d16
+}
+
+#loginbar {
+    float: right;
+    width: 280px;
+}
+
+#sidebar {
+    clear: both;
+    float: left;
+    width: 280px;
+    background: darkgreen;
+}
+
+#content {
+    margin-left: 280px;
+    background: yellow;
+}
+
 .style1 {
     font: 18px/27px 'ColaborateThinRegular', Arial, sans-serif;
     background-color: #DDDDDD;
@@ -78,13 +105,16 @@ a:hover {
  color : #999999;
  text-decoration : none;
 }
+
 a:active {
  color : #BBBBBB;
  text-decoration: none
 }
+
 input[name="pass"] {
     background-color: #B3CDB0;
 }
+
 input[name="user"] {
     background-color: #B3CDB0;
 }

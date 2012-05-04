@@ -14,40 +14,47 @@
 <body>
   <div id="page-container">
 
-  <div id="main-nav" class="hidden">Main Nav</div>
+  <div id="loginbar">
+    <form name="loginForm" id="formLogin" action="checkLogin.php" method="POST">
+      Username<input name="user" id="usr" type="text">
+      Password<input name="pass" id="psw" type="password">
+      <input onclick="checkLogin();" type="button" value="Login">
+    </form>
+  </div>
+
+  <div id="main-nav" >Main Nav</div>
   
   <div id="header">
   <h1 class="fontface">IChing</h1>	     
   </div>
 
-  <div id="sidebar" class="hidden">Sidebar</div>
+  <div id="sidebar">
+    <ul>
+      <li>How does it work</li>
+      <li>IChing resources</li>
+      <li>My view on why it does work</li>
+      <li>Random references</li>
+    </ul> 
+  </div>
   
   <div id="content">
-    <form name="loginForm" id="formLogin" action="checkLogin.php" method="POST">
-      <p class="style2">    
-        Username<input name="user" id="usr" type="text">
-        Password<input name="pass" id="psw" type="password">
-        <input onclick="checkLogin();" type="button" value="Login">
-      </p>
-    </form>
 
     <form name="questionForm" id="questionForm" action="getAnswer.php" method="post">
-      <div class="style2">
-        Type your question here<br>
-        <textarea cols="40" rows="5" id="questionTextArea">
-        </textarea>
-        <br>
+      Type your question here<br>
+      <textarea cols="40" rows="5" id="questionTextArea">
+      </textarea>
+      <br>
 
-        <input type="submit" value="Get answer">
-        <input type="button" value="Clear question"
-               onclick="$('#questionTextArea').val('');">
+      <input type="submit" value="Get answer">
+      <input type="button" value="Clear question"
+             onclick="$('#questionTextArea').val('');">
 
-        <!-- see which IChing systems are available -->
-        <div>
+      <!-- see which IChing systems are available -->
+      <div>
         <?php include "get_iching_radio.php" ?>
-        </div>
       </div>
-    </form>
+  </div>
+  </form>
   </div>
 
   <div id="footer">
