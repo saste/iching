@@ -12,7 +12,7 @@ $hexagram_file = "iching/wilhelm/" . sprintf("%02d", $hexagram_n);
 echo "chosen file is: $hexagram_file<br>";
 
 $fh = fopen($hexagram_file, 'r');
-$text = fread($fh, filesize($hexagram_file));
+$text = str_replace( "\n", "<br/>\n", fread($fh, filesize($hexagram_file)));
 fclose($fh);
 
 // show the result
