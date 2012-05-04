@@ -1,10 +1,3 @@
-<html>
-<head>
-<title>Test PHP</title>
-</head>
-
-<body>
-
 <?php
 
 if ($fh = opendir("iching/")) {
@@ -16,6 +9,3 @@ if ($fh = opendir("iching/")) {
     closedir($fh);
 }
 ?>
-
-</body>
-</html>
