@@ -1,7 +1,3 @@
-var expr_alphanum = /^[a-zA-Z0-9]+$/;
-var expr_alpha = /^[a-zA-Z]+$/;
-var expr_num = /^[0-9]+$/;
-
 function init()
 {
     // fill initial content
@@ -77,22 +73,20 @@ function checkLogin()
     }        
 }
 
-function isAlphanumeric(stringa)
+function isAlphanumeric(str)
 {
-    if (!expr_alphanum.test(stringa))
-        return false;
-    else
-        return true;
+    var expr_alphanum = /^[a-zA-Z0-9]+$/;
+    return expr_alphanum.test(str);
 }
 
-function isAlpha(stringa)
+function isAlpha(str)
 {
-    if (!expr_alpha.test(stringa)) return false;
-    else return true;
+    var expr_alpha = /^[a-zA-Z]+$/;
+    return expr_alpha.test(str);
 }
 
-function isNumeric(stringa)
+function isNumeric(str)
 {
-    if (!expr_num.test(stringa)) return false;
-    else return true;
+    var expr_num = /^[0-9]+$/;
+    return expr_num.test(str);
 }
