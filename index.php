@@ -35,6 +35,7 @@
       <li>IChing resources</li>
       <li>My view on why it does work</li>
       <li>Random references</li>
+      <li>About this website</li>
     </ul> 
   </div>
   
