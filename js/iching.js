@@ -1,8 +1,10 @@
 function init()
 {
-    // fill initial content
-    $('#content').html('');
+    getQuestionForm();
+}
 
+function getQuestionForm()
+{
     xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
