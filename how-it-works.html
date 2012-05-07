@@ -1,0 +1,37 @@
+<h2>How it works</h2>
+
+<p>A monogram consists of a symbol, whih can be a continuos line - ying
+(active principle), and an interrupted line - yang (receptive
+principle).
+
+<p>A bigram consists of a sequence of two monograms.
+
+<p>A trigram consists on a sequence of three monograms.  You can
+associate to ying the number 1, and to yang the number 0, and you get
+a binary encoding of a trigram, which thus can be considered a number
+from 0 to 7.
+
+<p>An hexagram is given by the composition of two trigrams. The first
+trigam is called the inner, the second trigram is called the outer
+aspect.
+
+<p>Thus an hexagram can also be identified by a binary sequence, so can
+be represented by a number ranging from 0 to 63.
+
+<p>Note also that an hexagram is traditionally associated to a number
+which does'nt represent the corresponding binary sequence, this is
+possibly due to the order they are displaced in the original text.
+
+<p>Note that in the IChing Online a variant is applied, where a
+  monogram can be changing or pure, which have different probabilities
+  and a slightly different interpretation, but which is <em>not</em>
+  described in Wilhelm translation which I consulted (nor in Crowley),
+  so I'm omitting this in the computation of the hexagram, and I
+  simply assume that each hexagram has the same probability of
+  occurrence.
+</p>
+
+<p>
+  I'm using the strandard PHP implementation of rand() for computing
+  the number associated to an hexagram, so nothing fancy here.
+</p>

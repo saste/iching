@@ -32,7 +32,7 @@
   <div id="sidebar">
     <ul>
       <li><a href="#" onclick="getQuestionForm()">New question</a>
-      <li>How does it work</li>
+      <li><a href="#" onclick="getPageContent('how-it-works')">How it works</a></li>
       <li><a href="#" onclick="getPageContent('resources')">IChing resources</a></li>
       <li><a href="#" onclick="getPageContent('my-view')">My view on why it does work</a></li>
       <li>Random references</li>
