@@ -1,6 +1,6 @@
 <?php
 
-$username=$_POST['username'];
+$nickname=$_POST['nickname'];
 $password=$_POST['password'];
 
 // FIXME: do not hardcode these values
@@ -14,12 +14,14 @@ $db_name = "iching";
 
 $db = mysql_select_db($db_name, $sql_connection);
 
-$query="SELECT * FROM users WHERE username='" . $username . "' AND password='" . $password . "'";
+$query="SELECT * FROM users WHERE nickname='" . mysql_real_escape_string($nickname) . "' AND password='" . mysql_real_escape_string($password) . "'";
 
 $result = mysql_query($query);
 
 if ($result) {
-    echo json_encode($result);
+    // convert result to an associative array
+    $row = mysql_fetch_assoc($result);
+    echo json_encode($row);
 } else {
     echo json_encode("{}");
 }

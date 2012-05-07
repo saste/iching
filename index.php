@@ -17,8 +17,8 @@
 
   <div id="loginbar">
     <form id="loginForm" method="POST">
-      Username<input id="username" type="text">
-      Password<input id="password" type="password">
+      Nickname<input id="nickname" name="nickname" type="text">
+      Password<input id="password" name="password" type="password">
       <input type="submit" value="Login">
     </form>
   </div>

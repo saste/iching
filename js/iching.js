@@ -10,6 +10,7 @@ function isAlphanumeric(str)
 $(document).ready(function() {
     var opts = {
         url: 'check-login.php',
+        type: "post",
         beforeSubmit: function(formData) {
             // validate fields
             var username = $('#username').val();
