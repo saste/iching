@@ -31,12 +31,13 @@ $(document).ready(function() {
             return true;
         },                
         success: function(data) {
+            var res;
             // response is a json containing all the data
-            eval("res = " + data);
+            eval("res = " + data + ";");
             if (res.id) {
                 userIsLogged = true;
                 userId = res.id;
-                $('#loginBar').html("Welcome " + res.nickname + "!");
+                $('#loginbar').html("Welcome " + res.nickname + "!");
             } else {
                 alert("User with specified nickname and password does not exist!");
             }

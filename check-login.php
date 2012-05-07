@@ -21,6 +21,6 @@ $result = mysql_query($query);
 if ($result) {
     echo json_encode($result);
 } else {
-    echo json_encode("{ nickname:\"foo\"; id:42; }");
+    echo json_encode("{}");
 }
 ?>
