@@ -7,61 +7,48 @@ function isAlphanumeric(str)
     return expr_alphanum.test(str);
 }
 
-function isAlpha(str)
-{
-    var expr_alpha = /^[a-zA-Z]+$/;
-    return expr_alpha.test(str);
-}
-
-function isNumeric(str)
-{
-    var expr_num = /^[0-9]+$/;
-    return expr_num.test(str);
-}
-
-$(document).ready(function() { 
-    $('#loginForm')
-    .ajaxForm({ 
-            url: 'check-login.php',
-            beforeSubmit: function() {
-                // validate fields
-                var username = $('#username').val();
-                var password = $('#password').val();
-
-                if (username == '' || password == '') {
-                    alert('Missing username and/or password.');
-                    return false;
-                }
-
-                if (!is_alphanumeric(username) || !is_alphanumeric(password)) {
-                    alert('Invalid username or password specified, ' + 
-                          'they can only contain letters or numbers');
-                    $('#password').style.background='#ff5555';
-                    $('#username').style.background='#ff5555';
-                    return false;
-                }
-                return true;
-            },                
-            success: function(data) {
-                alert("success!");
-                // response is a json containing all the data
-                eval("res = " + data);
-                if (res.id) {
-                    userIsLogged = true;
-                    userId = res.id;
-                    $('#loginBar').html("Welcome " + res.nickname + "!");
-                } else {
-                    alert("User with specified nickname and password does not exist!");
-                }
+$(document).ready(function() {
+    var opts = {
+        url: 'check-login.php',
+        beforeSubmit: function(formData) {
+            // validate fields
+            var username = $('#username').val();
+            var password = $('#password').val();
+            
+            if (username == '' || password == '') {
+                alert('Missing username and/or password.');
+                return false;
             }
-    })
-    .submit(function() {
-        $(this).ajaxSubmit(); 
+
+            if (!isAlphanumeric(username) || !isAlphanumeric(password)) {
+                alert('Invalid username or password specified, ' + 
+                      'they can only contain letters or numbers');
+                $('#password').style.background='#ff5555';
+                $('#username').style.background='#ff5555';
+                return false;
+            }
+            
+            return true;
+        },                
+        success: function(data) {
+            // response is a json containing all the data
+            eval("res = " + data);
+            if (res.id) {
+                userIsLogged = true;
+                userId = res.id;
+                $('#loginBar').html("Welcome " + res.nickname + "!");
+            } else {
+                alert("User with specified nickname and password does not exist!");
+            }
+        }
+    };
+
+    $('#loginForm').submit(function() {
+        $(this).ajaxSubmit(opts); 
         // return false to prevent normal browser submit and page navigation 
         return false; 
     });
 });
-
 
 function getQuestionForm()
 {
