@@ -1,6 +1,24 @@
 var userIsLoggedIn = false;
 var userId;
 
+function isAlphanumeric(str)
+{
+    var expr_alphanum = /^[a-zA-Z0-9]+$/;
+    return expr_alphanum.test(str);
+}
+
+function isAlpha(str)
+{
+    var expr_alpha = /^[a-zA-Z]+$/;
+    return expr_alpha.test(str);
+}
+
+function isNumeric(str)
+{
+    var expr_num = /^[0-9]+$/;
+    return expr_num.test(str);
+}
+
 $(document).ready(function() { 
     $('#loginForm')
     .ajaxForm({ 
@@ -44,10 +62,6 @@ $(document).ready(function() {
     });
 });
 
-function init()
-{
-    getQuestionForm();
-}
 
 function getQuestionForm()
 {
@@ -77,6 +91,11 @@ function getQuestionForm()
     xhr.send();
 }
 
+function init()
+{
+    getQuestionForm();
+}
+
 function getPageContent(page)
 {
     xhr = new XMLHttpRequest();
@@ -102,22 +121,4 @@ function submitQuestion()
     }
     xhr.open("GET", "iching-question-form.php", true);
     xhr.send();
-}
-
-function isAlphanumeric(str)
-{
-    var expr_alphanum = /^[a-zA-Z0-9]+$/;
-    return expr_alphanum.test(str);
-}
-
-function isAlpha(str)
-{
-    var expr_alpha = /^[a-zA-Z]+$/;
-    return expr_alpha.test(str);
-}
-
-function isNumeric(str)
-{
-    var expr_num = /^[0-9]+$/;
-    return expr_num.test(str);
 }
