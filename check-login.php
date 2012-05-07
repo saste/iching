@@ -5,8 +5,8 @@ $password=$_POST['password'];
 
 // FIXME: do not hardcode these values
 $db_hostname = "localhost";
-$db_username = "root";
-$db_password = "";
+$db_username = "iching";
+$db_password = "iching";
 
 $sql_connection = mysql_connect($db_hostname, $db_username, $db_password);
 
@@ -18,10 +18,9 @@ $query="SELECT * FROM users WHERE username='" . $username . "' AND password='" .
 
 $result = mysql_query($query);
 
-if ($result)
-    if ($num_rows = mysql_num_rows($result)>0) {
-        $row = mysql_fetch_array($result);
-        header("location: ../homepage.php?id=".$row[0]);
-    } else
-        echo "<script>alert('Ti è andata male! Riprova!'); history.back();</script>";
+if ($result) {
+    echo json_encode($result);
+}
+
+mysql_close($sql_connection)
 ?>

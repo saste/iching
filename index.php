@@ -16,10 +16,10 @@
   <div id="page-container">
 
   <div id="loginbar">
-    <form name="loginForm" id="formLogin" action="check_login.php" method="POST">
+    <form id="loginForm" method="POST">
       Username<input id="username" type="text">
       Password<input id="password" type="password">
-      <input onclick="checkLogin();" type="button" value="Login">
+      <input type="submit" value="Login">
     </form>
   </div>
 
