@@ -6,7 +6,7 @@ use iching;
 
 create table if not exists `users` (
   `id` int(16) not null auto_increment,
-  `nickname` varchar(64) not null,
+  `nickname` varchar(64) not null unique,
   `creation_date` date not null,
   `password` varchar(64) not null,
   primary key (`id`)
@@ -24,3 +24,6 @@ create table if not exists `questions` (
 
 create user 'iching'@'localhost' identified by 'iching';
 grant all on iching.* to 'iching'@'localhost';
+
+-- to add an entry - manually:
+-- insert into users (nickname, creation_date, password) values("barfoo", CURRENT_DATE(), "foobar");
