@@ -63,6 +63,7 @@ function getQuestionForm()
             $('#questionForm')
             .ajaxForm({
                 url: 'get_answer.php',
+                headers: { userid: userId },
                 success: function(data) {
                     $('#content').html(data);
                 }

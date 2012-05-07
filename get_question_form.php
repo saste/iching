@@ -1,6 +1,6 @@
 <form id="questionForm" method="post">
       Type your question here<br>
-      <textarea cols="40" rows="5" id="questionTextArea">
+      <textarea cols="40" rows="5" id="questionTextArea" name="question">
       </textarea>
       <br>
 
