@@ -23,8 +23,8 @@ $(document).ready(function() {
             if (!isAlphanumeric(username) || !isAlphanumeric(password)) {
                 alert('Invalid username or password specified, ' + 
                       'they can only contain letters or numbers');
-                $('#password').style.background='#ff5555';
-                $('#username').style.background='#ff5555';
+                // $('#password').style.background='#ff5555';
+                // $('#username').style.background='#ff5555';
                 return false;
             }
             
