@@ -38,6 +38,7 @@ $(document).ready(function() {
             if (res.id) {
                 userIsLogged = true;
                 userId = res.id;
+                $('#userId').val(userId);
                 $('#loginbar').html("Welcome " + res.nickname + "!");
             } else {
                 alert("User with specified nickname and password does not exist!");
@@ -63,7 +64,6 @@ function getQuestionForm()
             $('#questionForm')
             .ajaxForm({
                 url: 'get-answer.php',
-                headers: { userid: userId },
                 success: function(data) {
                     $('#content').html(data);
                 }

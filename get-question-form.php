@@ -4,6 +4,7 @@
       </textarea>
       <br>
 
+      <input type="text" id="userId" name="userId" class="hidden" >
       <input type="submit" value="Get answer">
       <input type="button" value="Clear question"
              onclick="$('#questionTextArea').val('');">

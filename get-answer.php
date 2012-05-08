@@ -1,7 +1,7 @@
 <?php
-$question = $_POST['question'];
+$question    = $_POST['question'];
 $translation = $_POST['translation'];
-$userid = $_POST['userid'];
+$userid      = $_POST['userId'];
 
 echo "Question is: " . $question . "<br>";
 
@@ -15,7 +15,7 @@ $hexagram_file = "iching/wilhelm/" . sprintf("%02d", $hexagram_n);
 echo "chosen file is: $hexagram_file<br>";
 
 $fh = fopen($hexagram_file, 'r');
-$text = str_replace( "\n", "<br/>\n", fread($fh, filesize($hexagram_file)));
+$text = str_replace( "\n", "<br>\n", fread($fh, filesize($hexagram_file)));
 fclose($fh);
 
 // insert question into DB, *if* the user is registered
@@ -25,13 +25,10 @@ if ($userid) {
     $sql_connection = mysql_connect($db_hostname, $db_username, $db_password);
 
     $db = mysql_select_db($db_name, $sql_connection);
-    $query="INSERT * INTO questions (user_id, question, question_date) values (" .
-        $userid . ", " . mysql_real_escape_string($question) . ",  CURRENT_DATE());";
-
-    echo $query;
+    $query = sprintf("INSERT INTO questions (user_id, question, question_date) VALUES ('%s', '%s', CURRENT_DATE())",
+                     $userid, mysql_real_escape_string($question));
     $result = mysql_query($query);
 }
-
 
 // show the answer text
 echo "Text is:<br> $text";
