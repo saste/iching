@@ -25,8 +25,8 @@ if ($userid) {
     $sql_connection = mysql_connect($db_hostname, $db_username, $db_password);
 
     $db = mysql_select_db($db_name, $sql_connection);
-    $query = sprintf("INSERT INTO questions (user_id, question, question_date) VALUES ('%s', '%s', CURRENT_DATE())",
-                     $userid, mysql_real_escape_string($question));
+    $query = sprintf("INSERT INTO questions (user_id, question, question_date, hexagram_id) VALUES ('%s', '%s', CURRENT_DATE())",
+                     $userid, mysql_real_escape_string($question), $hexagram_n);
     $result = mysql_query($query);
 }
 

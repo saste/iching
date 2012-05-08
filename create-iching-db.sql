@@ -17,6 +17,7 @@ create table if not exists `questions` (
   `user_id` int(16) not null,
   `question` text,
   `question_date` date not null,
+  `hexagram_id` int(16) not null,
   primary key (`id`)
 );
 
