@@ -62,7 +62,7 @@ function getQuestionForm()
             // bind 'questionForm'
             $('#questionForm')
             .ajaxForm({
-                url: 'get_answer.php',
+                url: 'get-answer.php',
                 headers: { userid: userId },
                 success: function(data) {
                     $('#content').html(data);
@@ -77,7 +77,7 @@ function getQuestionForm()
             });
         }
     }
-    xhr.open("GET", "get_question_form.php", true);
+    xhr.open("GET", "get-question-form.php", true);
     xhr.send();
 }
 

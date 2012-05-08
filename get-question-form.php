@@ -10,6 +10,6 @@
 
       <!-- see which IChing translations are available -->
       <div>
-      <?php include "get_iching_radio.php" ?>
+      <?php include "get-iching-radio.php" ?>
       </div>
 </form>
