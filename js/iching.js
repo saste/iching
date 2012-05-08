@@ -51,35 +51,20 @@ $(document).ready(function() {
         // return false to prevent normal browser submit and page navigation 
         return false; 
     });
+
+    getPageContent('question-form');
+
+    $('#questionForm').submit(function() {
+        $(this).ajaxSubmit({
+            url: 'get-answer.php',
+            method: "post",
+            success: function(data) {
+                $('#content').html(data);
+            }
+        });
+        return false; 
+    });
 });
-
-function getQuestionForm()
-{
-    xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            $('#content').html(xhr.responseText);
-
-            // bind 'questionForm'
-            $('#questionForm')
-            .ajaxForm({
-                url: 'get-answer.php',
-                success: function(data) {
-                    $('#content').html(data);
-                }
-            })
-            // attach handler to form's submit event 
-            .submit(function() { 
-                // submit the form 
-                $(this).ajaxSubmit(); 
-                // return false to prevent normal browser submit and page navigation 
-                return false; 
-            });
-        }
-    }
-    xhr.open("GET", "get-question-form.php", true);
-    xhr.send();
-}
 
 function init()
 {
@@ -95,7 +80,33 @@ function init()
 
     $("#main-nav").append($('ul#navitems li').clone()
                           .each(function(i) {$(this).find("span").text(map[$(this).attr("name")])}));
+
     getQuestionForm();
+}
+
+function getQuestionForm()
+{
+    xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            $('#content').html(xhr.responseText);
+
+            var formOpts = {
+                url: 'get-answer.php',
+                success: function(data) {
+                    $('#content').html(data);
+                }
+            };
+
+            // attach handler to form's submit event 
+            $('#questionForm').submit(function() { 
+                $(this).ajaxSubmit(formOpts); 
+                return false; 
+            });
+        }
+    }
+    xhr.open("GET", "question-form.html", true);
+    xhr.send();
 }
 
 function getPageContent(page)
