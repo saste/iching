@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>IChing</title>
+  <title>I Ching</title>
   <link rel="stylesheet" href="css/master.css" type="text/css" charset="utf-8">
 
   <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -25,14 +25,14 @@
   <div id="main-nav"></div>
 
   <div id="header">
-  <h1 class="fontface">IChing</h1>
+  <h1 class="fontface">I Ching</h1>
   </div>
 
   <div id="sidebar">
     <ul id="navitems">
       <li name="new-question"><a href="#" onclick="getQuestionForm()"><span>New question</span></a>
       <li name="how-it-works"><a href="#" onclick="getPageContent('how-it-works')"><span>How it works</span></a></li>
-      <li name="resources"><a href="#" onclick="getPageContent('resources')"><span>IChing resources</span></a></li>
+      <li name="resources"><a href="#" onclick="getPageContent('resources')"><span>I Ching resources</span></a></li>
       <li name="my-view"><a href="#"      onclick="getPageContent('my-view')"><span>My view on why it does work</span></a></li>
       <li name="references"><a href="#"    onclick="getPageContent('references')"><span>Random references</span></li>
       <li name="about"><a href="#" id="about"         onclick="getPageContent('about')"><span>About this website</span></a></li>
