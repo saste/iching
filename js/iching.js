@@ -84,12 +84,13 @@ function getQuestionForm()
 function init()
 {
     var map = {
-        "new-question": "question",
+        "about":        "about",
         "how-it-works": "how it works",
-        "resources":    "resources",
         "my-view":      "my view",
+        "new-question": "question",
+        "profile":      "profile",
         "references":   "references",
-        "about":        "about"
+        "resources":    "resources",
     };
 
     $("#main-nav").append($('ul#navitems li').clone()

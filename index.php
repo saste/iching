@@ -36,6 +36,7 @@
       <li name="my-view">     <a href="#" onclick="getPageContent('my-view')"><span>My view on why it does work</span></a></li>
       <li name="references">  <a href="#" onclick="getPageContent('references')"><span>Random references</span></li>
       <li name="about">       <a href="#" onclick="getPageContent('about')"><span>About this website</span></a></li>
+      <li class="profile" name="profile"><a href="#" onclick="getPageContent('profile')"><span>Profile information</span></a></li>
     </ul>
   </div>
 
