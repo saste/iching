@@ -35,7 +35,7 @@
       <li><a href="#" onclick="getPageContent('how-it-works')">How it works</a></li>
       <li><a href="#" onclick="getPageContent('resources')">IChing resources</a></li>
       <li><a href="#" onclick="getPageContent('my-view')">My view on why it does work</a></li>
-      <li>Random references</li>
+      <li><a href="#" onclick="getPageContent('references')">Random references</li>
       <li><a href="#" onclick="getPageContent('about')">About this website</a></li>
     </ul>
   </div>
