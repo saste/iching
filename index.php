@@ -32,10 +32,10 @@
     <ul id="navitems">
       <li name="new-question"><a href="#" onclick="getQuestionForm()"><span>New question</span></a>
       <li name="how-it-works"><a href="#" onclick="getPageContent('how-it-works')"><span>How it works</span></a></li>
-      <li name="resources"><a href="#" onclick="getPageContent('resources')"><span>I Ching resources</span></a></li>
-      <li name="my-view"><a href="#"      onclick="getPageContent('my-view')"><span>My view on why it does work</span></a></li>
-      <li name="references"><a href="#"    onclick="getPageContent('references')"><span>Random references</span></li>
-      <li name="about"><a href="#" id="about"         onclick="getPageContent('about')"><span>About this website</span></a></li>
+      <li name="resources">   <a href="#" onclick="getPageContent('resources')"><span>I Ching resources</span></a></li>
+      <li name="my-view">     <a href="#" onclick="getPageContent('my-view')"><span>My view on why it does work</span></a></li>
+      <li name="references">  <a href="#" onclick="getPageContent('references')"><span>Random references</span></li>
+      <li name="about">       <a href="#" onclick="getPageContent('about')"><span>About this website</span></a></li>
     </ul>
   </div>
 
