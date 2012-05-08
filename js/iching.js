@@ -83,6 +83,17 @@ function getQuestionForm()
 
 function init()
 {
+    var map = {
+        "new-question": "question",
+        "how-it-works": "how it works",
+        "resources":    "resources",
+        "my-view":      "my view",
+        "references":   "references",
+        "about":        "about"
+    };
+
+    $("#main-nav").append($('ul#navitems li').clone()
+                          .each(function(i) {$(this).find("span").text(map[$(this).attr("name")])}));
     getQuestionForm();
 }
 

@@ -23,6 +23,13 @@ p {
     height: 50px;
 }
 
+#main-nav li
+{
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+}
+
 #header {
     height: 100px;
     background: #db6d16

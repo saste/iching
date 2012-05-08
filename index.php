@@ -22,20 +22,20 @@
     </form>
   </div>
 
-  <div id="main-nav" >Main Nav</div>
+  <div id="main-nav"></div>
 
   <div id="header">
   <h1 class="fontface">IChing</h1>
   </div>
 
   <div id="sidebar">
-    <ul>
-      <li><a href="#" onclick="getQuestionForm()">New question</a>
-      <li><a href="#" onclick="getPageContent('how-it-works')">How it works</a></li>
-      <li><a href="#" onclick="getPageContent('resources')">IChing resources</a></li>
-      <li><a href="#" onclick="getPageContent('my-view')">My view on why it does work</a></li>
-      <li><a href="#" onclick="getPageContent('references')">Random references</li>
-      <li><a href="#" onclick="getPageContent('about')">About this website</a></li>
+    <ul id="navitems">
+      <li name="new-question"><a href="#" onclick="getQuestionForm()"><span>New question</span></a>
+      <li name="how-it-works"><a href="#" onclick="getPageContent('how-it-works')"><span>How it works</span></a></li>
+      <li name="resources"><a href="#" onclick="getPageContent('resources')"><span>IChing resources</span></a></li>
+      <li name="my-view"><a href="#"      onclick="getPageContent('my-view')"><span>My view on why it does work</span></a></li>
+      <li name="references"><a href="#"    onclick="getPageContent('references')"><span>Random references</span></li>
+      <li name="about"><a href="#" id="about"         onclick="getPageContent('about')"><span>About this website</span></a></li>
     </ul>
   </div>
 
