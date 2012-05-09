@@ -126,6 +126,7 @@ function fillAnswerPage()
             //process the result, use it to fill the form
             var res;
             eval('res = ' + data + ';');
+            $("#question").html(currentQuestion);
             $("#questionDate").html(res.questionDate);
             $("#hexagramId").html(res.hexagramId);
 
