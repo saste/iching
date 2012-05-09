@@ -1,5 +1,6 @@
 var userIsLoggedIn = false;
 var userId;
+var currentQuestion;
 
 function isAlphanumeric(str)
 {
@@ -34,7 +35,7 @@ $(document).ready(function() {
         success: function(data) {
             var res;
             // response is a json containing all the data
-            eval("res = " + data + ";");
+            eval('res = ' + data + ';');
             if (res.id) {
                 userIsLogged = true;
                 userId = res.id;
@@ -92,14 +93,15 @@ function getQuestionForm()
             $('#content').html(xhr.responseText);
 
             var formOpts = {
-                url: 'get-answer.php',
+                url: 'answer.html',
                 success: function(data) {
                     $('#content').html(data);
+                    fillAnswerPage();
                 }
             };
-
             // attach handler to form's submit event 
             $('#questionForm').submit(function() { 
+                currentQuestion = $("#questionTextArea").val();
                 $(this).ajaxSubmit(formOpts); 
                 return false; 
             });
@@ -107,6 +109,54 @@ function getQuestionForm()
     }
     xhr.open("GET", "question-form.html", true);
     xhr.send();
+}
+
+function fillAnswerPage()
+{
+    $("#question").html(currentQuestion);
+
+    // request data from PHP -> get-answer.php
+    $.ajax({
+        url: "get-answer.php",
+        data: {
+            question: currentQuestion,
+            userId: userId,
+        },
+        success: function(data) {
+            //process the result, use it to fill the form
+            var res;
+            eval('res = ' + data + ';');
+            $("#questionDate").html(res.questionDate);
+            $("#hexagramId").html(res.hexagramId);
+
+            var checkval = "checked";
+            // fill translationSelector with the available translations
+            $.each(res.translations, function(i, e) {
+                $("form#translationSelector")
+                    .append($(document.createElement('input'))
+                            .attr({type: "radio", name: "translation", value: e, checked: checkval}))
+                    .append(e);
+                checkval = false;
+            });
+
+            fillHexagramText();
+        }
+        // register callbacks
+    });
+}
+
+function fillHexagramText()
+{
+    $.ajax({
+        url: "get-hexagram-text.php",
+        data: {
+            "hexagramId": $("#hexagramId").html(),
+            "translation": $("form#translationSelector input:checked").val(),
+        },
+        success: function(data) {
+            $('#hexagramExplanation').html(data);
+        }
+    });
 }
 
 function getPageContent(page)

@@ -1,25 +1,12 @@
 <?php
-$question    = $_POST['question'];
-$translation = $_POST['translation'];
-$userid      = $_POST['userId'];
+$question = $_GET['question'];
 
-echo "Question is: " . $question . "<br>";
-
-echo "Question asked on date: " . date('Y-m-d h:i:s a', time()) . "<br>";
-
+$question_date = date('Y-m-d h:i:s a', time());
 $hexagram_n = rand(1, 64);
-echo "The selected hexagram number was $hexagram_n<br>";
-
-// choose the file in the right directory
-$hexagram_file = "iching/wilhelm/" . sprintf("%02d", $hexagram_n);
-echo "chosen file is: $hexagram_file<br>";
-
-$fh = fopen($hexagram_file, 'r');
-$text = str_replace( "\n", "<br>\n", fread($fh, filesize($hexagram_file)));
-fclose($fh);
 
 // insert question into DB, *if* the user is registered
-if ($userid) {
+if (isset($_GET['$userId'])) {
+    $userid  = $_GET['userId'];
     include("db.php");
 
     $sql_connection = mysql_connect($db_hostname, $db_username, $db_password);
@@ -30,6 +17,20 @@ if ($userid) {
     $result = mysql_query($query);
 }
 
-// show the answer text
-echo "Text is:<br> $text";
+// return a json containing question_date and hexagram_n
+$res = array ("hexagramId"=>$hexagram_n, "questionDate"=>$question_date);
+
+// get list of supported translations
+if ($fh = opendir("iching/")) {
+    $translations = array();
+    while (false !== ($entry = readdir($fh))) {
+        if ($entry != "." and $entry != "..") {
+            $translations[] = $entry;
+        }
+    }
+    closedir($fh);
+}
+
+$res["translations"] = $translations;
+echo json_encode($res);
 ?>
