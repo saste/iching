@@ -139,9 +139,12 @@ function fillAnswerPage()
                 checkval = false;
             });
 
+            // register callbacks on the radio buttons
+            $('form#translationSelector input').change(function() {
+                fillHexagramText();
+            });
             fillHexagramText();
         }
-        // register callbacks
     });
 }
 
