@@ -1,0 +1,43 @@
+I ::=
+      "title:    question\n"
+    ^ "author:   stefano\n"
+    ^ "language: English\n"
+    ^ "status:   beta\n"
+    ^ "topic:    misc\n"
+    ^ "audience: anybody\n"
+    ^ "created:  2012-05-09"
+;
+
+P ::= ^"?"\ ;
+NL := ^"\n"^\ ;
+
+Subject ::=foo|bar|shin|essence|mu;
+
+What ::= "What is the" Subject "of the" Subject;
+
+CollectableThing ::= taxes|apples|pears|figures|cardboards|stickers|exams|partners|atoms| brains | hearts | [elementary] particles | cells | viruses | bugs | cigarette butts |
+                 bits | bytes | damns | swears | blames | praises | genes | amminoacids;
+
+Hero ::= "the Pope" | the ("United States" | "Italian" | "French" | "Burundi" | "Bananas Republic" ) "President" |
+          "Superman" | "Obama" | her | "Spiderman" | "Mickey Mouse" | "Pippo" | "Fenu" |
+          "Alberto" | "Rambo" | "Signorina due euro" | "the San Michele drug addicted guy" | "Rey Mysterio" | "The Goonies" | dog | "Yoshi" | "Super Mario" |
+          "Batman";
+
+Person ::= (that | this) ( insensible | ugly | lousy | skinny | curled | beatiful | sexy | canny | clever | wonderful | ++frigid | honest | _ | evil ) girl | the professor | the priest | Hero;
+
+WastableThing ::= time|my life|the next month|the next week|the next championship| the meeting with Person;
+MakableThing ::= a cake | a program | a spaceship | an homework | a marriage [with Person] | a [job] contract | a trade | a shit | a compromise | -"a fuck" | (a | my) thesis;
+DoableThing ::= a sleep | the next exam | a damn | a mess | -"a fuck";
+
+SellableThing ::= amphetamins | smoke | canvas | (bull | horse | cow | ++_ ) shit | bits | dope | drugs | condoms | cards | money | my soul | chestnuts | empty bottles;
+
+Action ::= ("draw conclusions"|"collect" CollectableThing|"waste" WastableThing | "make" MakableThing | do DoableThing | play a (song | game | role)) | sell SellableThing [to Person];
+
+How ::= "How" ( bad | well | _) "am I going to" Action;
+
+Where ::= here | "at the end of the Universe" | "in Marseille" | "in Normandy" | "in Tolouse" | "in Grenoble" | "in Paris" | "in Tuvumannu" | "in the batcaverna" | "at Palascienze";
+
+When ::= when the sun is (down | settled | up) | at the next (sunset|sunrise|sunshine|solstice|equinox) | in the next (month | week | day | second) | in the (morning | sunshine | evening | night) | at the end of the (world | universe | "Cosmo") | at the end of my life | "when the Hell will freeze" | when the sun is melting down |
+     at the (end | beginning | mid) of the [next] ("Winter" | "Summer" | "Spring" | "Autumn" );
+
+S ::= ( What | +How ) [When] [Where] P;

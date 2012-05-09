@@ -85,6 +85,16 @@ function init()
     getQuestionForm();
 }
 
+function getRandomQuestion()
+{
+    $.ajax({
+        url: "get-random-question.php",
+        success: function(data) {
+            $('#questionTextArea').html(data);
+        }
+    });
+}
+
 function getQuestionForm()
 {
     xhr = new XMLHttpRequest();
