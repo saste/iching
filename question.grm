@@ -26,10 +26,10 @@ Hero ::= "the Pope" | the ("United States" | "Italian" | "French" | "Burundi" | 
 Person ::= (that | this) ( insensible | ugly | lousy | skinny | curled | beatiful | sexy | canny | clever | wonderful | ++frigid | honest | _ | evil ) girl | the professor | the priest | Hero;
 
 WastableThing ::= time|my life|the next month|the next week|the next championship| the meeting with Person;
-MakableThing ::= a cake | a program | a spaceship | an homework | a marriage [with Person] | a [job] contract | a trade | a shit | a compromise | -"a fuck" | (a | my) thesis;
-DoableThing ::= a sleep | the next exam | a damn | a mess | -"a fuck";
+MakableThing ::= a cake | a program | a spaceship | an homework | a marriage [with Person] | a [job] contract | a trade | --(a shit) | a compromise | --"a fuck" | (a | my) thesis;
+DoableThing ::= a sleep | the next exam | a damn | a mess | --"a fuck";
 
-SellableThing ::= amphetamins | smoke | canvas | (bull | horse | cow | ++_ ) shit | bits | dope | drugs | condoms | cards | money | my soul | chestnuts | empty bottles;
+SellableThing ::= amphetamins | smoke | canvas | --((bull | horse | cow | ++_ ) shit) | bits | dope | drugs | condoms | cards | money | my soul | chestnuts | empty bottles;
 
 Action ::= ("draw conclusions"|"collect" CollectableThing|"waste" WastableThing | "make" MakableThing | do DoableThing | play a (song | game | role)) | sell SellableThing [to Person];
 
