@@ -16,7 +16,7 @@ Subject ::=foo|bar|shin|essence|mu;
 What ::= "What is the" Subject "of the" Subject;
 
 CollectableThing ::= taxes|apples|pears|figures|cardboards|stickers|exams|partners|atoms| brains | hearts | [elementary] particles | cells | viruses | bugs | cigarette butts |
-                 bits | bytes | damns | swears | blames | praises | genes | amminoacids;
+                 bits | bytes | damns | swears | blames | praises | genes | amminoacids | amniotisc fluid;
 
 Hero ::= "the Pope" | the ("United States" | "Italian" | "French" | "Burundi" | "Bananas Republic" ) "President" |
           "Superman" | "Obama" | her | "Spiderman" | "Mickey Mouse" | "Pippo" | "Fenu" |
