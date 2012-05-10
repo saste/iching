@@ -5,14 +5,14 @@ $question_date = date('Y-m-d h:i:s a', time());
 $hexagram_n = rand(1, 64);
 
 // insert question into DB, *if* the user is registered
-if (isset($_GET['$userId'])) {
+if (isset($_GET['userId'])) {
     $userid  = $_GET['userId'];
     include("db.php");
 
     $sql_connection = mysql_connect($db_hostname, $db_username, $db_password);
 
     $db = mysql_select_db($db_name, $sql_connection);
-    $query = sprintf("INSERT INTO questions (user_id, question, question_date, hexagram_id) VALUES ('%s', '%s', CURRENT_DATE())",
+    $query = sprintf("INSERT INTO questions (user_id, question, question_date, hexagram_id) VALUES ('%s', '%s', CURRENT_DATE(), %d)",
                      $userid, mysql_real_escape_string($question), $hexagram_n);
     $result = mysql_query($query);
 }
