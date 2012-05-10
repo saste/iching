@@ -52,46 +52,6 @@ p {
     background: yellow;
 }
 
-.style1 {
-    font: 18px/27px 'ColaborateThinRegular', Arial, sans-serif;
-    background-color: #DDDDDD;
-    text-align: justify;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.style2 {
-    font: 18px/27px 'ColaborateLightRegular', Arial, sans-serif;
-    background-color: #AAAAAA;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.style3 {
-    font: 18px/27px 'ColaborateRegular', Arial, sans-serif;
-    background-color: #555555;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.style4 {
-    font: 18px/27px 'ColaborateThinRegular', Arial, sans-serif;
-    background-color: #DDDDDD;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.style5 {
-    font: 18px/27px 'ColaborateLightRegular', Arial, sans-serif;
-    background-color: #AAAAAA;
-    text-align: justify;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
 #container {
     width: 800px;
     margin-left: auto;
