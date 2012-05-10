@@ -144,6 +144,15 @@ function getProfileInfo()
             eval('res = ' + data + ';');
             $("#nickname").html(res.user.nickname);
             $("#creationDate").html(res.user.creation_date);
+
+            $.each(res.questions, function(i, e) {
+                $("table#questions")
+                    .append($("<tr>" +
+                              "<td>" + e.question_date + "</td>" +
+                              "<td>" + e.question      + "</td>" +
+                              "<td>" + e.hexagram_id   + "</td>" +
+                              "</tr>"));
+            });
         }
     });
 }
