@@ -121,6 +121,33 @@ function getQuestionForm()
     xhr.send();
 }
 
+function getProfilePage()
+{
+    $.ajax({
+        url: "profile.html",
+        success: function(data) {
+            $('#content').html(data);
+            getProfileInfo();
+        }
+    });
+}
+
+function getProfileInfo()
+{
+    $.ajax({
+        url: "get-profile-info.php",
+        data: {
+            "userid": userId
+        },
+        success: function(data) {
+            var res;
+            eval('res = ' + data + ';');
+            $("#nickname").html(res.user.nickname);
+            $("#creationDate").html(res.user.creation_date);
+        }
+    });
+}
+
 function fillAnswerPage()
 {
     $("#question").html(currentQuestion);
