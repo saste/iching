@@ -14,12 +14,9 @@ h1.fontface {
 p {
     padding-right: 30px;
     padding-left: 30px;
-    /* border-radius: 20px 20px 20px 20px; */
-    /* box-shadow: 5px 5px 10px 2px #333333;  */
 }
 
 #main-nav {
-    background: red;
     height: 50px;
 }
 
@@ -31,26 +28,26 @@ p {
 }
 
 #header {
-    height: 100px;
-    background: #db6d16
+    height: 70px;
+    background: #444444;
+    color: white;
 }
 
 #loginbar {
     float: right;
     width: 400px;
-    text-align: center;
+    text-align: right;
 }
 
 #sidebar {
     clear: both;
     float: left;
     width: 280px;
-    background: darkgreen;
 }
 
 #content {
-    margin-left: 280px;
-    background: yellow;
+    margin-left: 300px;
+    margin-top: 20px;
 }
 
 #container {
@@ -79,14 +76,6 @@ a:active {
     text-decoration: none
 }
 
-input[name="nickname"] {
-    background-color: #B3CDB0;
-}
-
-input[name="password"] {
-    background-color: #B3CDB0;
-}
-
 input {
   background-color: #888888;
   border: 2px solid #BBBBBB;
@@ -101,10 +90,11 @@ input {
     padding-top: 20px;
     text-align: center;
     clear: both;
-    height: 66px;
+    height: 50px;
     font-family: Tahoma, Arial, Helvetica, Sans-serif;
     font-size: 10px;
     color: #c9c9c9;
+    line-height: 1;
 }
 
 #footer a {
