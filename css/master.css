@@ -37,7 +37,8 @@ p {
 
 #loginbar {
     float: right;
-    width: 280px;
+    width: 400px;
+    text-align: center;
 }
 
 #sidebar {
@@ -78,22 +79,22 @@ a:active {
     text-decoration: none
 }
 
-input[name="pass"] {
+input[name="nickname"] {
     background-color: #B3CDB0;
 }
 
-input[name="user"] {
+input[name="password"] {
     background-color: #B3CDB0;
 }
 
-input.myButton {
-  background-color: #888888; /* colore di sfondo    */
-  border: 2px solid #BBBBBB; /* bordo dell'elemento */
-  color: #fff;               /* colore del testo    */
-  font-weight: bold;         /* testo in grassetto  */
-  padding: 0;                /* padding             */
-  height: 25px;              /* altezza             */
-  width: 80px;               /* larghezza           */
+input {
+  background-color: #888888;
+  border: 2px solid #BBBBBB;
+  color: #fff;
+  font-weight: bold;
+  padding: 0;
+  height: 25px;
+  width: 100px;
 }
 
 #footer {
