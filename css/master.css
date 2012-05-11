@@ -77,13 +77,13 @@ a:active {
 }
 
 input {
-  background-color: #888888;
-  border: 2px solid #BBBBBB;
-  color: #fff;
-  font-weight: bold;
-  padding: 0;
-  height: 25px;
-  width: 100px;
+    background-color: #888888;
+    border: 2px solid #BBBBBB;
+    color: #fff;
+    font-weight: bold;
+    padding: 0;
+    height: 25px;
+    width: 100px;
 }
 
 #footer {
