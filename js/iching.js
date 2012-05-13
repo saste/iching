@@ -37,7 +37,7 @@ $(document).ready(function() {
             // response is a json containing all the data
             eval('res = ' + data + ';');
             if (res.id) {
-                userIsLogged = true;
+                userIsLoggedIn = true;
                 userId = res.id;
                 $('#userId').val(userId);
                 $('#loginbar').html("Welcome " + res.nickname + "!");
@@ -131,6 +131,11 @@ function getProfilePage()
 
 function getProfileInfo()
 {
+    if (!userIsLoggedIn) {
+        $("#profileContent").html("<b>User is not logged in!</b>");
+        return;
+    }
+
     $.ajax({
         url: "get-profile-info.php",
         data: {
