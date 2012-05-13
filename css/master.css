@@ -17,7 +17,7 @@ p {
 }
 
 #main-nav {
-    height: 30px;
+    height: 20px;
 }
 
 #main-nav li
@@ -111,4 +111,3 @@ input[type="submit"] {
     color: #c9c9c9;
     line-height: 1;
 }
-
