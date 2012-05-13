@@ -213,17 +213,13 @@ function fillHexagramText()
 
 function getPageContent(page)
 {
-    xhr = new XMLHttpRequest();
-    url = page + ".html";
-
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            $('#content').html(xhr.responseText);
+    $.ajax({
+        url: page + ".html",
+        success: function(data) {
+            $('#content').html(data);
+            return false;
         }
-    }
-    xhr.open("GET", url, true);
-    xhr.send();
-    return false;
+    });
 }
 
 function submitQuestion()
