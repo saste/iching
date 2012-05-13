@@ -228,12 +228,10 @@ function getPageContent(page)
 
 function submitQuestion()
 {
-    xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            $('#content').html(xhr.responseText);
+    $.ajax({
+        url: "iching-question-form.php",
+        success: function(data) {
+            $('#content').html(data);
         }
-    }
-    xhr.open("GET", "iching-question-form.php", true);
-    xhr.send();
+    });
 }
