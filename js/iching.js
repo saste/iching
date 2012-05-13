@@ -97,10 +97,10 @@ function getRandomQuestion()
 
 function getQuestionForm()
 {
-    xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            $('#content').html(xhr.responseText);
+    $.ajax({
+        url: "question-form.html",
+        success: function(data) {
+            $('#content').html(data);
 
             var formOpts = {
                 url: 'answer.html',
@@ -109,16 +109,13 @@ function getQuestionForm()
                     fillAnswerPage();
                 }
             };
-            // attach handler to form's submit event 
             $('#questionForm').submit(function() { 
                 currentQuestion = $("#questionTextArea").val();
                 $(this).ajaxSubmit(formOpts); 
                 return false; 
             });
         }
-    }
-    xhr.open("GET", "question-form.html", true);
-    xhr.send();
+    });
 }
 
 function getProfilePage()
