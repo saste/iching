@@ -35,7 +35,6 @@ p {
 
 #loginbar {
     float: right;
-    width: 400px;
     text-align: right;
 }
 
@@ -76,13 +75,29 @@ a:active {
     text-decoration: none
 }
 
-input {
+input[type="button"] {
     background-color: #888888;
     border: 2px solid #BBBBBB;
     color: #fff;
     font-weight: bold;
     padding: 0;
     height: 25px;
+}
+
+input[type="submit"] {
+    background-color: #888888;
+    border: 2px solid #BBBBBB;
+    color: #fff;
+    font-weight: bold;
+    padding: 0;
+    height: 25px;
+}
+
+#nickname {
+    width: 100px;
+}
+
+#password {
     width: 100px;
 }
 
