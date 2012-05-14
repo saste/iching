@@ -1,0 +1,9 @@
+In order to install this website you need:
+
+1. PHP and MySQL installed on the server
+
+2. Create an "iching" database, check the script
+   "create-iching-db.sql" for generating the DB.
+   Credentials are specified in the file db.php.
+
+2. polygen for generating a random questions on the server side
