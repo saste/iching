@@ -8,7 +8,34 @@ function isAlphanumeric(str)
     return expr_alphanum.test(str);
 }
 
+function loadLoginbar()
+{
+    $.ajax({
+        url: "loginbar.html",
+        success: function(data) {
+            $("#loginbar").html(data);
+            initLoginbar();
+        }
+    });
+}
+
 $(document).ready(function() {
+    loadLoginbar();
+    getPageContent('question-form');
+
+    $('#questionForm').submit(function() {
+        $(this).ajaxSubmit({
+            url: 'get-answer.php',
+            method: "post",
+            success: function(data) {
+                $('#content').html(data);
+            }
+        });
+        return false; 
+    });
+});
+
+function initLoginbar() {
     var opts = {
         url: 'check-login.php',
         type: "post",
@@ -40,7 +67,8 @@ $(document).ready(function() {
                 userIsLoggedIn = true;
                 userId = res.id;
                 $('#userId').val(userId);
-                $('#loginbar').html("Welcome " + res.nickname + "!");
+                $('#loginbar').html("Welcome " + res.nickname + "!")
+                    .append($("<input type=\"submit\" value=\"Logout\" onclick=\"logout()\">"));
             } else {
                 alert("User with specified nickname and password does not exist!");
             }
@@ -52,20 +80,13 @@ $(document).ready(function() {
         // return false to prevent normal browser submit and page navigation 
         return false; 
     });
+}
 
-    getPageContent('question-form');
-
-    $('#questionForm').submit(function() {
-        $(this).ajaxSubmit({
-            url: 'get-answer.php',
-            method: "post",
-            success: function(data) {
-                $('#content').html(data);
-            }
-        });
-        return false; 
-    });
-});
+function logout()
+{
+    userIsLoggedIn = false;
+    loadLoginbar();
+}
 
 function init()
 {
