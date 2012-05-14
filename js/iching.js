@@ -199,6 +199,9 @@ function fillAnswerPage()
             $("#questionDate").html(res.questionDate);
             $("#hexagramId").html(res.hexagramId);
 
+            var hexagramCode = 19904 + res.hexagramId;
+            $("#hexagram_symbol").html("&#" + hexagramCode);
+
             var checkval = "checked";
             // fill translationSelector with the available translations
             $.each(res.translations, function(i, e) {

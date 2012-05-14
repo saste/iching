@@ -117,3 +117,7 @@ input[type="submit"] {
     color: #c9c9c9;
     line-height: 1;
 }
+
+#hexagram_symbol {
+    font-size: 64px;
+}
