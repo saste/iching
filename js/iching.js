@@ -111,7 +111,7 @@ function getRandomQuestion()
     $.ajax({
         url: "get-random-question.php",
         success: function(data) {
-            $('#questionTextArea').html(data);
+            $('#questionTextArea').val(data);
         }
     });
 }
