@@ -199,7 +199,7 @@ function fillAnswerPage()
             $("#questionDate").html(res.questionDate);
             $("#hexagramId").html(res.hexagramId);
 
-            var hexagramCode = 19904 + res.hexagramId;
+            var hexagramCode = 19903 + res.hexagramId;
             $("#hexagram_symbol").html("&#" + hexagramCode);
 
             var checkval = "checked";
